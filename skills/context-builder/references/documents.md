@@ -16,6 +16,8 @@ This table is the source of truth for generated filenames, profile membership an
 
 Write specific, actionable content based on the interview and evidence, with detail proportional to the project's scope and complexity. Adapt headings to the project; omit irrelevant topics rather than filling a template. Describe existing state only when observed, agreed plans as plans, and explicitly deferred nonblocking decisions with their next decision point. Use illustrative snippets only when useful to explain approved decisions, and identify them as examples rather than application implementation. Maintain consistency between documents and preserve stable existing feature IDs on updates.
 
+For illustrations of useful detail, consult the relevant [worked examples](examples.md); they are not project defaults.
+
 ## Core documents
 
 - **Project overview:** problem, target users, goals, measurable success criteria where agreed, principal workflows, features in scope, exclusions and important constraints. Describe the actor, trigger, relevant business rules and expected outcome of each principal workflow, including important failure states when applicable.

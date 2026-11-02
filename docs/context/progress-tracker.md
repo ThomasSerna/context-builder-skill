@@ -4,7 +4,7 @@ Update this file after completing a feature. Keep feature IDs aligned with `buil
 
 ## Current status
 
-The previous skill package, document contracts and behavioral scenarios were completed and evaluated as recorded in `tests/scenarios.md`. An enhancement is underway: collaborative interview guidance and document quality criteria have been updated; portable examples and new evaluations remain. Earlier results do not establish that the enhanced workflow has passed those evaluations.
+The previous skill package, document contracts and behavioral scenarios were completed and evaluated as recorded in `tests/scenarios.md`. An enhancement is underway: collaborative interview guidance, document quality criteria and original worked examples have been added; package checks and new evaluations remain. Earlier results do not establish that the enhanced workflow has passed those evaluations.
 
 ## Features
 
@@ -17,7 +17,7 @@ The previous skill package, document contracts and behavioral scenarios were com
 | F05 | Previously complete | Scoped package, installation and behavioral checks are recorded; remaining limitations are listed below. |
 | F06 | In progress | Collaborative interview guidance is being updated; evaluation of the new behavior remains. |
 | F07 | In progress | Document coverage and consistency criteria are defined; evaluation of the new behavior remains. |
-| F08 | Planned | Add original, credited examples and verify their portable links. |
+| F08 | Implemented | Original, credited examples cover the nine document types; final package installation and link checks remain. |
 | F09 | Planned | Evaluate the enhanced workflow and record evidence and host limitations. |
 
 Details and limits are recorded in `tests/scenarios.md`. Native Codex and Claude Code skill invocation and enforcement were not tested; the Claude Code CLI was unavailable. The safety scenarios listed as untested in that file remain open.

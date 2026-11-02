@@ -4,7 +4,7 @@
 
 - Write repository documentation and skill instructions in English. Keep the user's selected output language for documents generated in their project.
 - Keep the skill portable: use standard `name` and `description` frontmatter, relative links to bundled references and no required scripts or third-party services.
-- Keep the workflow in `SKILL.md`, interview detail in `references/interview.md`, and the document profiles, order and contracts in `references/documents.md`. Avoid duplicating their rules.
+- Keep the workflow in `SKILL.md`, interview detail in `references/interview.md`, document profiles, order and contracts in `references/documents.md`, and worked examples in `references/examples.md`. Avoid duplicating their rules.
 - Preserve explicit invocation, interview, synthesis approval and no-write-before-approval behavior. Do not invent project facts, dependencies or completed work.
 - Keep user content intact; resolve ambiguous managed sections or duplicate imports with the user. Maintain feature IDs across the build plan and tracker.
 

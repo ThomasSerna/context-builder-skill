@@ -15,6 +15,8 @@ Inspect the project before asking questions. Read applicable agent instructions,
 
 Confirm or ask for two independent choices: **basic** or **complete** context, and whether to include **UI** documentation. Honor choices already made. Read [the document contracts](references/documents.md) for the selected files and their reading order, and [the interview guide](references/interview.md) for the decision areas to cover. Resolve references relative to this skill, including when it is installed outside the project.
 
+When examples would clarify the expected detail, consult the relevant sections of the [worked examples](references/examples.md). Use the actual project's evidence and approved decisions for its content.
+
 Examine existing `AGENTS.md` and `CLAUDE.md` before proposing changes. If managed markers are duplicated, incomplete, unbalanced or otherwise ambiguous, or existing instructions conflict with the intended section, preserve the files and ask how to resolve the ambiguity. A file with no markers and no conflicting context section can receive a new managed section.
 
 ## Interview

@@ -4,7 +4,7 @@ The skill has no runtime library dependencies. The following tools and formats a
 
 ## Agent Skills
 
-The [Agent Skills specification](https://agentskills.io/specification) defines the portable skill directory, required frontmatter and relative reference conventions. Keep `skills/context-builder/` self-contained, including both reference files.
+The [Agent Skills specification](https://agentskills.io/specification) defines the portable skill directory, required frontmatter and relative reference conventions. Keep `skills/context-builder/` self-contained, including its referenced materials.
 
 ## Codex
 

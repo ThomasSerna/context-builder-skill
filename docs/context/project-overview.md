@@ -14,7 +14,7 @@ The audience is developers using Codex, Claude Code or other agents that support
 - Specify applicable document detail in proportion to project complexity and check coverage and consistency across the agreed context.
 - Offer basic or complete documentation, with UI documentation as an independent choice. UI discussions produce approved design values rather than application code.
 - Generate a managed reading list in `AGENTS.md`, add the `CLAUDE.md` import and preserve unrelated existing content on re-runs.
-- Distribute an instruction-only skill with installation guidance, project documentation and a repeatable behavioral test protocol.
+- Distribute an instruction-only skill with original worked examples, installation guidance, project documentation and a repeatable behavioral test protocol.
 
 ## Out of scope
 

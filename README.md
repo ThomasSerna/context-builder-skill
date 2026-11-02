@@ -61,6 +61,8 @@ Answer the questions and review the complete synthesis. Once you approve it, the
 
 The reading order and content contracts are defined in [`documents.md`](skills/context-builder/references/documents.md). As implementation proceeds, keep the affected context current; update the UI registry when components change and the progress tracker when features are completed, when those files are included.
 
+The [worked context examples](skills/context-builder/references/examples.md) are original fictional excerpts illustrating useful detail, not templates or default project choices. Their organization and depth were inspired by [JobPilot's context documentation](https://github.com/adrianhajdin/job_pilot/tree/788baa5784f94264c33780fd051f9d0b17a68f60/context) by Adrian Hajdin / JavaScript Mastery (`adrianhajdin`). No JobPilot documentation or design assets are included.
+
 ## Development
 
 The skill is instruction-only and has no runtime dependencies. [`tests/scenarios.md`](tests/scenarios.md) describes repeatable checks for the profile matrix, interview, approval and safe re-runs. Repository-specific planning context is in [`docs/context/`](docs/context/).
@@ -69,4 +71,4 @@ Useful references include the [Agent Skills specification](https://agentskills.i
 
 ## License
 
-[MIT](LICENSE) © 2026 Thomas Serna.
+This repository's original work is licensed under [MIT](LICENSE) © 2026 Thomas Serna.

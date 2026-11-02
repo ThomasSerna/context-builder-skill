@@ -8,6 +8,7 @@ The portable skill lives in `skills/context-builder/`:
 SKILL.md                    Entry point and workflow
 references/interview.md     Interview topics and completion criteria
 references/documents.md     Output contracts and reading order
+references/examples.md      Optional worked examples of document detail
 agents/openai.yaml          Codex display metadata and invocation policy
 ```
 
