@@ -54,4 +54,4 @@ Keep the affected context documents current as the project changes.
 
 Do not include the illustrative comment in the generated section. If the registry or tracker is active, their own instructions define their specific maintenance. If markers are duplicated, unbalanced or ambiguous, or an existing section conflicts with this one, ask the user to resolve the conflict without guessing what to delete. Existing unselected documents stay on disk and are not added to the managed list.
 
-In root `CLAUDE.md`, include the standalone import `@AGENTS.md` once and preserve other instructions. If duplicate imports exist, ask the user how to resolve them rather than deleting content by guesswork.
+In root `CLAUDE.md`, ensure exactly one active `@AGENTS.md` import and preserve other instructions. An existing active import can appear inline; keep it instead of adding another. If there is no active import, add `@AGENTS.md` on a line of its own. Mentions inside inline code or fenced code blocks are not active imports. If duplicate active imports exist, ask the user how to resolve them rather than deleting content by guesswork.
