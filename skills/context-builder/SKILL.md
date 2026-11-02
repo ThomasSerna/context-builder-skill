@@ -23,9 +23,11 @@ Build the context with the user, starting from their knowledge and the available
 
 Separate verified facts, proposals, user-approved decisions and deferred decisions. Inspect available sources when they can answer a question; ask the user about intent and choices that cannot be established from the project. Confirm proposed decisions before adopting them; silence is not approval. Identify decisions explicitly deferred by the user and their next decision point; resolve all decisions that block the agreed scope. Never invent a decision, an implementation or a source.
 
-For UI documentation, agree on concrete design values and behavior before finishing the interview. Existing code and provided references are evidence; confirm intended changes with the user. Do not create application code.
+For UI documentation, agree on concrete design values and behavior before finishing the interview. Existing code and provided references are evidence; confirm intended changes with the user. Illustrative snippets may document a decision; do not implement the application.
 
 ## Review before writing
+
+Apply the [document coverage and consistency review](references/documents.md#coverage-and-consistency-review) to the agreed decisions before presenting the synthesis. Resolve blocking gaps and conflicts with the user; explicitly defer only nonblocking choices.
 
 Present a complete synthesis in the conversation: project goals, audience, scope and exclusions, chosen architecture and technology, relevant data and integrations, standards and testing, implementation stages, UI decisions if selected, verified existing state, deferred nonblocking decisions, output language, selected files and planned changes to existing documents and agent instructions. Identify any significant alternatives or conflicts resolved with the user.
 
@@ -37,4 +39,4 @@ After approval, apply [the document contracts](references/documents.md). Create 
 
 Create or update the marked context section in root `AGENTS.md`, preserving all other instructions. Create root `CLAUDE.md` if needed and ensure it imports `@AGENTS.md` once without removing its other content. Ask how to resolve duplicate imports or ambiguous managed markers; never guess which content to delete. The document contracts define the exact heading, introduction, markers and reading order.
 
-Check that the selected documents reflect the approved synthesis, distinguish observed from planned work, contain no invented facts, agree on feature IDs and decisions, and link to existing files. Verify the managed section lists exactly the active files in order, the Claude import occurs once, and unrelated content remains intact. Report what was created or updated and any explicitly deferred decisions.
+Apply the [coverage and consistency review](references/documents.md#coverage-and-consistency-review) again to the generated documents and check them against the approved synthesis. Verify the managed section lists exactly the active files in order, the Claude import occurs once, and unrelated content remains intact. Report what was created or updated and any explicitly deferred decisions.

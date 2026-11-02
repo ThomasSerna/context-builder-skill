@@ -11,6 +11,7 @@ The audience is developers using Codex, Claude Code or other agents that support
 - Inspect relevant evidence in new or existing projects and clarify goals, architecture, constraints, engineering practices and a build plan.
 - Help turn vague ideas into decisions; offer reasoned alternatives and recommendations, challenge concrete conflicts and respect the user's viable choices.
 - Ask follow-up questions in rounds of 2–4 and resolve blocking decisions before asking for approval. Distinguish evidence, proposals, approved and deferred decisions.
+- Specify applicable document detail in proportion to project complexity and check coverage and consistency across the agreed context.
 - Offer basic or complete documentation, with UI documentation as an independent choice. UI discussions produce approved design values rather than application code.
 - Generate a managed reading list in `AGENTS.md`, add the `CLAUDE.md` import and preserve unrelated existing content on re-runs.
 - Distribute an instruction-only skill with installation guidance, project documentation and a repeatable behavioral test protocol.

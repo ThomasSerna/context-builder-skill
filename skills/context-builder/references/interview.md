@@ -28,11 +28,11 @@ For example:
 
 ## Product and scope
 
-Understand the problem, target users, their main workflows, desired outcomes and success criteria. Identify the main features, priorities, boundaries, exclusions, constraints and assumptions. Ask what a first usable version must accomplish and which decisions are deliberately deferred.
+Understand the problem, target users, their main workflows, desired outcomes and success criteria. For principal workflows, establish the actors, triggers, inputs, outcomes and relevant failure states. Identify the main features, priorities, boundaries, exclusions, constraints and assumptions. Ask what a first usable version must accomplish and which decisions are deliberately deferred.
 
 ## Architecture and technology
 
-Agree on the system's major components and boundaries, architecture style, chosen languages and frameworks, data and storage, important flows and interfaces, and relevant integrations. Discuss authentication, authorization, security, deployment environments, reliability, privacy, performance and operational constraints when they matter. Ask how the proposed design fits the user's skills, resources and existing code.
+Agree on the system's major components and boundaries, architecture style, chosen languages and frameworks, data and storage, important flows and interfaces, and relevant integrations. For each important flow, clarify the data, interfaces and access rules needed to implement it. Discuss authentication, authorization, security, deployment environments, reliability, privacy, performance and operational constraints when they matter. Ask how the proposed design fits the user's skills, resources and existing code.
 
 Avoid presenting a proposed design as an existing implementation. For significant external dependencies, determine their role, compatibility constraints and how to verify their official documentation.
 
@@ -42,8 +42,8 @@ Agree on coding conventions, project structure, error handling, validation, test
 
 ## UI, only when selected
 
-Identify users' screens or surfaces, core flows, component needs, layout, interaction and visual references. Agree on concrete values for applicable color, typography, spacing and other design tokens, and on responsive behavior, accessibility, interaction and common states. Ask about an existing design system or component library where relevant. Present proposed values for the user's approval; do not treat unapproved examples as decisions. Discuss expected components without claiming they already exist.
+Identify users' screens or surfaces, core flows, component needs, layout, interaction and visual references. Inspect provided references when the host can do so; distinguish observable details from inferences and ask the user to resolve conflicts or blocking ambiguities. If a reference cannot be inspected, say so and ask for the missing decisions. Agree on concrete values for applicable color, typography, spacing and other design tokens, and on responsive behavior, accessibility, interaction and common states. Ask about an existing design system or component library where relevant. Present proposed values for the user's approval; do not treat unapproved examples as decisions. Discuss expected components without claiming they already exist.
 
 ## Completion
 
-The interview is complete when all applicable areas have enough agreed detail to produce the selected documents, contradictions and decisions blocking the planned work are resolved, and any remaining nonblocking choices are explicitly deferred with a decision point. The planned output must distinguish observed, approved and pending work. Then follow the synthesis and approval step in `SKILL.md`; do not write documents first.
+The interview is complete when the agreed evidence and decisions satisfy the selected [document contracts and coverage review](documents.md#coverage-and-consistency-review), blocking conflicts are resolved, and any remaining nonblocking choices are explicitly deferred with a decision point. The planned output must distinguish observed, approved and pending work. Then follow the synthesis and approval step in `SKILL.md`; do not write documents first.
