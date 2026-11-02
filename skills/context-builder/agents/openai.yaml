@@ -1,0 +1,7 @@
+interface:
+  display_name: "Context Builder"
+  short_description: "Clarify a project before writing its repository context"
+  default_prompt: "Use $context-builder to clarify this project and create its documentation before implementation."
+
+policy:
+  allow_implicit_invocation: false
