@@ -16,7 +16,7 @@ The main file links directly to its references. The skill can be copied as a dir
 ## Workflow and boundaries
 
 1. An explicit user invocation starts the workflow. The agent inspects relevant repository state and offers basic/complete and UI choices.
-2. The agent conducts an adaptive interview, separates observed facts from user decisions and resolves blockers. The user selects the document language, which defaults to English.
+2. The agent conducts an adaptive, collaborative interview, helping the user formulate decisions, explaining options and tradeoffs, and constructively challenging concrete conflicts. It separates observed facts, proposals, approved and deferred decisions and resolves blockers. The user selects the document language, which defaults to English.
 3. The agent presents the complete synthesis and waits for explicit approval. A material change invalidates that approval. No generated, draft or checkpoint files are written beforehand.
 4. The agent creates or updates the selected context files, maintains the marked `AGENTS.md` reading list and ensures a single `@AGENTS.md` import in `CLAUDE.md`.
 5. The agent checks the output for accuracy, agreement with the selected profile, preservation of unrelated content and consistency between the plan and tracker.

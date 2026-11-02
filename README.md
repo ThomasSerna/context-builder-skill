@@ -2,7 +2,7 @@
 
 Context Builder is an explicitly invoked [Agent Skill](https://agentskills.io/specification) that interviews you about a software project and turns agreed decisions into working context for you and your coding agents. It supports new and existing projects, with a basic or complete document set and an independent choice to include UI documentation.
 
-The skill asks questions in short rounds, examines existing project evidence and challenges gaps or conflicting decisions. It summarizes the result for your approval before writing any files. It documents design and implementation plans; it does not implement the application.
+The skill asks questions in short rounds, examines existing project evidence and helps develop incomplete ideas. When useful, it compares options, explains tradeoffs and recommends an approach for you to decide. It constructively challenges choices that conflict with your goals or the evidence. It summarizes the result for your approval before writing any files. It documents design and implementation plans; it does not implement the application.
 
 ## Install
 

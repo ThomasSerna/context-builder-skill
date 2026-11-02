@@ -19,3 +19,19 @@ Explain installation, explicit invocation, output and limitations; document this
 ## F05 — Behavioral verification and release preparation
 
 Validate the skill and run feasible behavioral and installation checks, recording evidence and host limitations. Review the documentation and group changes into coherent `feat:` commits. Acceptance: results distinguish static checks from real agent sessions, and the Git history and working tree accurately reflect completed work.
+
+## F06 — Collaborative interview
+
+Help users clarify vague ideas, evaluate suitable alternatives and make informed decisions. Challenge concrete conflicts while respecting viable user preferences. Acceptance: the interview explains recommendations and tradeoffs, distinguishes proposals from approved decisions, resolves blockers and keeps the existing synthesis approval boundary.
+
+## F07 — Sufficient and consistent context
+
+Define project-appropriate document completion criteria and cross-document checks. Acceptance: the selected documents contain actionable detail supported by evidence or approved decisions, with consistent scope, flows, UI decisions and feature IDs.
+
+## F08 — Portable examples
+
+Provide original, credited examples that illustrate useful depth without prescribing a particular project or stack. Acceptance: examples are bundled with the skill, reachable by relative links and usable offline.
+
+## F09 — Evaluation of the enhanced workflow
+
+Evaluate collaborative interviews, document sufficiency, consistency and existing safety boundaries. Acceptance: scenarios record observable results, preserve evidence and distinguish instruction-level checks from native host execution.

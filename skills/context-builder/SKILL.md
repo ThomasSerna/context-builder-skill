@@ -19,9 +19,9 @@ Examine existing `AGENTS.md` and `CLAUDE.md` before proposing changes. If manage
 
 ## Interview
 
-Ask 2–4 relevant questions per round, using any interactive question tool available or ordinary conversation. Follow answers with more rounds until the guide's completion criteria are met; there is no fixed number of rounds. Do not repeat settled answers. Challenge contradictions, ask about consequential tradeoffs and give concrete options when the user wants help deciding.
+Build the context with the user, starting from their knowledge and the available evidence. Ask 2–4 relevant questions per round, using any interactive question tool available or ordinary conversation. Help clarify vague answers, offer reasoned options and a recommendation when useful, and constructively question choices that conflict with the goals or evidence. Follow the [interview guide](references/interview.md) until its completion criteria are met; there is no fixed number of rounds. Do not repeat settled answers without a concrete reason.
 
-Separate verified facts, user-approved decisions and proposals. Inspect available sources when they can answer a question; ask the user about intent and choices that cannot be established from the project. Identify decisions explicitly deferred by the user and their next decision point; resolve all decisions that block the agreed scope. Never invent a decision, an implementation or a source.
+Separate verified facts, proposals, user-approved decisions and deferred decisions. Inspect available sources when they can answer a question; ask the user about intent and choices that cannot be established from the project. Confirm proposed decisions before adopting them; silence is not approval. Identify decisions explicitly deferred by the user and their next decision point; resolve all decisions that block the agreed scope. Never invent a decision, an implementation or a source.
 
 For UI documentation, agree on concrete design values and behavior before finishing the interview. Existing code and provided references are evidence; confirm intended changes with the user. Do not create application code.
 
