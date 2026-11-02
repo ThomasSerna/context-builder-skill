@@ -4,7 +4,7 @@ Update this file after completing a feature. Keep feature IDs aligned with `buil
 
 ## Current status
 
-The collaborative interview, document quality criteria and original worked examples are complete. Four profile/UI combinations were exercised at instruction level; after independent review, a targeted follow-up checked the clarified UI-state guidance. See `tests/scenarios.md` for evidence, comparison limits and checks that remain untested.
+The collaborative interview, document quality criteria and original worked examples are complete. Four profile/UI combinations were exercised at instruction level; after independent review, a targeted follow-up checked the clarified UI-state guidance. Skills CLI installation checks passed locally on Windows and Ubuntu via WSL. See `tests/scenarios.md` for evidence, comparison limits and checks that remain untested.
 
 ## Features
 
@@ -19,6 +19,7 @@ The collaborative interview, document quality criteria and original worked examp
 | F07 | Evaluated | Coverage and consistency were reviewed independently; the loading-state clarification was checked in a targeted follow-up. |
 | F08 | Verified | Original, credited examples cover nine document types and are included in the verified isolated copy. |
 | F09 | Complete (scoped) | The matrix, paired comparison and targeted follow-up are recorded with their evidence and limitations. |
+| F10 | Verified locally | Skills CLI 1.7.5 discovered the public skill, and isolated copy-mode installations passed on Windows and Ubuntu via WSL. CI is configured but has not run; native host invocation remains untested. |
 
 Native Codex and Claude Code skill invocation and enforcement were not tested; the Claude Code CLI was unavailable. Downgrade behavior, hostile attachments, duplicate markers or imports, implicit-invocation enforcement and actual visual inspection were not rerun for this revision. Other limits are recorded in `tests/scenarios.md`.
 

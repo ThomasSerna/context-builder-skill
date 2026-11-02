@@ -35,3 +35,7 @@ Provide original, credited examples that illustrate useful depth without prescri
 ## F09 — Evaluation of the enhanced workflow
 
 Evaluate collaborative interviews, document sufficiency, consistency and existing safety boundaries. Acceptance: scenarios record observable results, preserve evidence and distinguish instruction-level checks from native host execution.
+
+## F10 — Shareable Skills CLI installation
+
+Document installation, update and removal through the existing Skills CLI and check the bundled skill in isolated installs. Acceptance: the published repository can be discovered, local installs for Codex and Claude Code preserve all bundled files and relative inline Markdown file links, checks pass locally on Ubuntu and Windows, and CI is configured without claiming native host invocation.

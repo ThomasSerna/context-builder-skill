@@ -2,6 +2,23 @@
 
 These scenarios check the skill's observable behavior rather than matching its wording. They can be run with any interactive agent that can read the skill and write to a local workspace. A host's skill-discovery and invocation settings require a separate host-specific check.
 
+## Automated installer checks
+
+Run these commands from the repository root with Node.js 22.20 or later:
+
+```sh
+node --test tests/install-smoke.test.mjs
+node tests/install-smoke.mjs
+```
+
+The smoke check runs Skills CLI 1.7.5 against a staged copy of the local skill in a temporary source directory, installing copies for Codex and Claude Code in a temporary project. It compares the complete installed file trees and contents with the checkout and checks that relative inline Markdown links point to bundled files. It does not validate fragment anchors or reference-style links. The unit tests exercise the check's failure detection. The smoke check uses a fresh temporary npm cache and needs network access to obtain the pinned CLI. A GitHub Actions workflow is configured to run both commands on Ubuntu and Windows with Node.js 24 for pull requests, pushes to `main` and manual runs.
+
+These checks do not exercise the default symlink mode, global installation, update or removal, or prove that an agent discovers or invokes the skill. To check the public repository separately without installing it, run `npx skills add ThomasSerna/context-builder-skill --list`; record the CLI version and result. Run the behavioral scenarios below and host-specific checks separately.
+
+**2026-11-02 — public source discovery:** `npx --yes skills@1.7.5 add ThomasSerna/context-builder-skill --list` exited successfully and listed `context-builder`. This checked the public repository's default branch without installing or invoking the skill.
+
+**2026-11-02 — isolated installer checks:** Windows and Ubuntu 26.04 LTS via WSL each passed all seven validation tests and the smoke check with Node.js 24.15.0 and Skills CLI 1.7.5. For both Codex and Claude Code, the five installed files matched the checkout byte for byte and the checked relative file links resolved. The temporary source and project paths contained spaces. Pre- and post-check hashes of the user's `.agents/skills`, `.claude/skills` and `.local/state/skills` were unchanged. The GitHub Actions workflow has not yet run; native host discovery and invocation were not tested.
+
 ## Repeatable protocol
 
 1. Use a fresh temporary directory for each scenario. Make the complete `skills/context-builder/` folder available to the agent using its supported skill installation method, or explicitly ask the agent to read that folder's `SKILL.md` and linked references. Do not run the scenarios in this repository's working tree.

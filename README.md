@@ -8,15 +8,43 @@ The skill asks questions in short rounds, examines existing project evidence and
 
 ### Skills CLI
 
-With Node.js 22.20 or later and [`npx skills`](https://github.com/vercel-labs/skills), install for Codex from the published repository:
+Install or share Context Builder with the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```sh
-npx skills add ThomasSerna/context-builder-skill --skill context-builder --agent codex --global
+npx skills add ThomasSerna/context-builder-skill --skill context-builder
 ```
 
-For Claude Code, replace `codex` with `claude-code`. Omit `--global` and run the command in a project directory to install for that project only. The CLI can install skills for other supported agents; use the agent name listed in its documentation.
+The installer lets you choose an agent and installation scope. You need Node.js 22.20 or later, npm/npx, Git and network access to download the CLI and repository. Run the command in your project directory if you choose a project installation.
 
-To install from a local clone before the repository is published, replace `ThomasSerna/context-builder-skill` with the path to the clone. To inspect available skills without installing, run `npx skills add <source> --list`.
+To select an agent and scope directly, choose a command for the installation you need:
+
+```sh
+# Project installation: run inside the project directory
+npx skills add ThomasSerna/context-builder-skill --skill context-builder --agent codex --yes
+npx skills add ThomasSerna/context-builder-skill --skill context-builder --agent claude-code --yes
+
+# Global installation for your user
+npx skills add ThomasSerna/context-builder-skill --skill context-builder --agent codex --global --yes
+npx skills add ThomasSerna/context-builder-skill --skill context-builder --agent claude-code --global --yes
+```
+
+Add `--copy` to an `add` command to install separate copies instead of symlinks, for example when your system does not permit symlinks. Reinstalling can replace local changes to an installed skill; back them up first. The CLI also supports other agents; use the names in its documentation. To install from a local checkout, replace `ThomasSerna/context-builder-skill` with its path and quote the path if it contains spaces. To inspect a source without installing, run `npx skills add <source> --list`.
+
+To update Context Builder, run the command for the installation scope. The project command must be run in the project directory:
+
+```sh
+npx skills update context-builder --project
+npx skills update context-builder --global
+```
+
+Updates are scoped by skill and installation scope, not by agent. The CLI detects target agents when updating, so its selection may differ from the original installation. For an installation from a local checkout, update the checkout and rerun the original `skills add` command; the CLI skips local sources during `skills update`. Back up any local changes to the installed skill first. To remove a Codex installation, run the appropriate command; replace `codex` with `claude-code` for Claude Code:
+
+```sh
+npx skills remove context-builder --agent codex --yes
+npx skills remove context-builder --agent codex --global --yes
+```
+
+The first removal command applies to the current project. Manual installations must be removed from the corresponding skill directory manually.
 
 ### Manual installation
 
@@ -65,7 +93,14 @@ The [worked context examples](skills/context-builder/references/examples.md) are
 
 ## Development
 
-The skill is instruction-only and has no runtime dependencies. [`tests/scenarios.md`](tests/scenarios.md) describes repeatable checks for the profile matrix, interview, approval and safe re-runs. Repository-specific planning context is in [`docs/context/`](docs/context/).
+The skill is instruction-only and has no runtime dependencies. The installer checks use Node.js 22.20 or later. The smoke check downloads Skills CLI 1.7.5 into a fresh temporary npm cache and needs network access:
+
+```sh
+node --test tests/install-smoke.test.mjs
+node tests/install-smoke.mjs
+```
+
+The smoke check stages the local skill in a temporary source directory and installs it into a temporary project for Codex and Claude Code in copy mode, then compares the installed files with the checkout and checks relative inline Markdown file links. A GitHub Actions workflow is configured to run these checks with Node.js 24 on Ubuntu and Windows for pull requests, pushes to `main` and manual runs. [`tests/scenarios.md`](tests/scenarios.md) describes the installer checks and separate behavioral scenarios. Repository-specific planning context is in [`docs/context/`](docs/context/).
 
 Useful references include the [Agent Skills specification](https://agentskills.io/specification), [OpenAI's skills repository](https://github.com/openai/skills), [Anthropic's skills repository](https://github.com/anthropics/skills) and the [Superpowers brainstorming skill](https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md).
 

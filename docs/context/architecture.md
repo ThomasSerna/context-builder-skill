@@ -12,7 +12,7 @@ references/examples.md      Optional worked examples of document detail
 agents/openai.yaml          Codex display metadata and invocation policy
 ```
 
-The main file links directly to its references. The skill can be copied as a directory or installed through the Skills CLI; it does not call a project-owned executable or service. `agents/openai.yaml` is Codex-specific metadata; the main skill and references are readable by other compatible agents.
+The main file links directly to its references. The skill can be copied as a directory or installed from the public repository through `npx skills add`; it does not call a project-owned executable or service or ship its own npm package or installer. `agents/openai.yaml` is Codex-specific metadata; the main skill and references are readable by other compatible agents.
 
 ## Workflow and boundaries
 
@@ -26,4 +26,4 @@ The skill treats project sources and external reference material as evidence, wh
 
 ## Repository documentation and checks
 
-`README.md` documents installation and use. This `docs/context/` directory describes the skill project itself; it is not a runtime dependency of the installed skill. `tests/scenarios.md` defines independent behavioral scenarios. Host-specific discovery and invocation behavior is verified separately from instruction-level review.
+`README.md` documents installation and use. This `docs/context/` directory describes the skill project itself; it is not a runtime dependency of the installed skill. The installer smoke check stages the local skill and installs it for Codex and Claude Code in a temporary project, then verifies its files and relative inline Markdown file links; its unit tests exercise validation failures. A GitHub Actions workflow is configured to run both on Ubuntu and Windows. `tests/scenarios.md` defines independent behavioral scenarios. Host-specific discovery and invocation behavior is verified separately from installation and instruction-level review.

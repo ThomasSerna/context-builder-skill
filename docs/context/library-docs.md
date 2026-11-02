@@ -16,4 +16,4 @@ The [Claude Code skills documentation](https://code.claude.com/docs/en/skills) d
 
 ## Skills CLI
 
-The [Skills CLI](https://github.com/vercel-labs/skills) supports `npx skills add` for installing a skill from a repository or local path. It currently requires Node.js 22.20 or later for this installation option; the skill itself has no runtime dependency. Check the CLI's current documentation for supported agent names and options; a whole-folder manual installation is also available.
+The [Skills CLI](https://github.com/vercel-labs/skills) supports `npx skills add` for installing a skill from a repository or local path. The CLI currently requires Node.js 22.20 or later; remote installation also needs Git and network access. The skill itself has no runtime dependency. The automated installer check downloads CLI 1.7.5 into a fresh temporary cache and needs network access. Check the CLI's current documentation for supported agent names and options; a whole-folder manual installation is also available.
