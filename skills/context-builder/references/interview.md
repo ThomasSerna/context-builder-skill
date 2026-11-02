@@ -42,7 +42,7 @@ Agree on coding conventions, project structure, error handling, validation, test
 
 ## UI, only when selected
 
-Identify users' screens or surfaces, core flows, component needs, layout, interaction and visual references. Inspect provided references when the host can do so; distinguish observable details from inferences and ask the user to resolve conflicts or blocking ambiguities. If a reference cannot be inspected, say so and ask for the missing decisions. Agree on concrete values for applicable color, typography, spacing and other design tokens, and on responsive behavior, accessibility, interaction and common states. Ask about an existing design system or component library where relevant. Present proposed values for the user's approval; do not treat unapproved examples as decisions. Discuss expected components without claiming they already exist.
+Identify users' screens or surfaces, core flows, component needs, layout, interaction and visual references. Inspect provided references when the host can do so; distinguish observable details from inferences and ask the user to resolve conflicts or blocking ambiguities. If a reference cannot be inspected, say so and ask for the missing decisions. Agree on concrete values for applicable color, typography, spacing and other design tokens, and on responsive behavior, accessibility, interaction and applicable loading, empty and error states. Ask about an existing design system or component library where relevant. Present proposed values for the user's approval; do not treat unapproved examples as decisions. Discuss expected components without claiming they already exist.
 
 ## Completion
 

@@ -33,7 +33,7 @@ For illustrations of useful detail, consult the relevant [worked examples](examp
 ## UI documents
 
 - **UI tokens:** concrete approved semantic values for applicable colors, typography, spacing and other design tokens, including relevant themes and contrast expectations. Mark any deliberately deferred nonblocking token clearly; never substitute an invented value.
-- **UI rules:** approved screens or surfaces, layout and component principles, user interaction, common states, responsive behavior and accessibility expectations. Describe the relevant behavior and states of principal UI flows. Refer to the tokens rather than duplicating their definitions.
+- **UI rules:** approved screens or surfaces, layout and component principles, user interaction, applicable loading, empty and error states, responsive behavior and accessibility expectations. Describe the relevant behavior and states of principal UI flows. Refer to the tokens rather than duplicating their definitions.
 - **UI registry:** a living inventory of implemented components, their purposes, source paths and relevant reuse patterns. For a new project start with an empty inventory; do not list planned components as implemented. In an existing project include only components supported by observed evidence. Instruct future agents to consult the registry before building a component and update it after adding or changing one.
 
 ## Coverage and consistency review

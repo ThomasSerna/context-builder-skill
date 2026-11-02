@@ -12,5 +12,5 @@
 
 - Validate skill frontmatter and bundled relative links. Run the applicable scenarios in `tests/scenarios.md` when behavior changes, and report separately what was and was not exercised in a real host.
 - Check installation instructions against the relevant official documentation when changing them. Do not claim compatibility or current APIs without evidence.
-- Keep affected project context up to date. Delegate documentation creation and maintenance to the `docs` subagent as directed by `AGENTS.md`.
+- Keep affected project context up to date. Delegate documentation creation and maintenance to the `docs` subagent.
 - Group Git changes into coherent features and use commit subjects in the form `feat: <description>`.
