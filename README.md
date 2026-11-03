@@ -1,8 +1,8 @@
 # Context Builder
 
-Context Builder is an explicitly invoked [Agent Skill](https://agentskills.io/specification) that interviews you about a software project and turns agreed decisions into working context for you and your coding agents. It supports new and existing projects, with a basic or complete document set and an independent choice to include UI documentation.
+Context Builder is an explicitly invoked [Agent Skill](https://agentskills.io/specification) that helps you turn decisions about a software project into working context for you and your coding agents. It is designed for new and existing projects through separately requested business, technical and optional UI stages.
 
-The skill asks questions in short rounds, examines existing project evidence and helps develop incomplete ideas. When useful, it compares options, explains tradeoffs and recommends an approach for you to decide. It constructively challenges choices that conflict with your goals or the evidence. It checks that the agreed scope, implementation plan and relevant design and technical decisions fit together, then summarizes the result for your approval before writing any files. It documents design and implementation plans; it does not implement the application.
+The business stage is available now; the technical and UI stages are planned and not yet available. The skill examines existing evidence, questions material assumptions, compares suitable options and recommends an approach for you to decide. It asks for your approval before writing each stage's documents and stops after that stage. It documents plans and decisions; it does not implement the application.
 
 ## Install
 
@@ -73,23 +73,11 @@ Preserve any existing settings. The Claude Code `/skills` menu also exposes this
 
 ## Use
 
-From the project you want to document, invoke `$context-builder` in Codex or `/context-builder` in Claude Code. In another compatible agent, use its skill syntax or explicitly ask: “Use context-builder to document this project.” Then choose:
+From the project you want to document, request the business stage explicitly, for example: “Use `$context-builder` for the business stage of this project.” In Claude Code, invoke `/context-builder` and specify the business stage. A compatible agent also accepts a request such as “Usa context-builder para la etapa de negocio de este proyecto.” If no stage is named, the skill asks which one you want.
 
-1. **Basic** or **complete** documentation.
-2. Whether to include **UI** documentation.
-3. The output language, if you prefer something other than English. The interview uses your conversation language.
+The interview uses your conversation language. Documents default to English, with another language available when starting. Review the stage synthesis: only after your approval does the agent create or update `docs/context/project-overview.md`, `docs/context/context-status.md` and the managed reading instructions in root `AGENTS.md` and `CLAUDE.md`. Existing unrelated content is preserved. The status index records approved decisions' source documents and any affected decisions needing review, so a later chat can reuse them.
 
-Answer the questions and review the complete synthesis. Once you approve it, the agent creates or updates the selected documents in `docs/context/`. Existing unrelated content is preserved; context files outside the selected profile remain on disk. The agent maintains a marked reading list in root `AGENTS.md` and ensures root `CLAUDE.md` imports it via `@AGENTS.md`.
-
-| Selection | Documents |
-| --- | --- |
-| Basic | Project overview, architecture, code standards and build plan |
-| Complete | Basic documents plus library documentation and progress tracker |
-| UI addition | UI tokens, UI rules and UI registry, with either profile |
-
-The reading order and content contracts are defined in [`documents.md`](skills/context-builder/references/documents.md). As implementation proceeds, keep the affected context current; update the UI registry when components change and the progress tracker when features are completed, when those files are included.
-
-The [worked context examples](skills/context-builder/references/examples.md) are original fictional excerpts illustrating useful detail, not templates or default project choices. Their organization and depth were inspired by [JobPilot's context documentation](https://github.com/adrianhajdin/job_pilot/tree/788baa5784f94264c33780fd051f9d0b17a68f60/context) by Adrian Hajdin / JavaScript Mastery (`adrianhajdin`). No JobPilot documentation or design assets are included.
+Each stage requires a separate explicit request. Technical and UI requests currently stop without writing because their stage guides are not yet implemented; UI will remain optional. The [business guide](skills/context-builder/references/business.md) defines its completion criteria and includes an original fictional example. Its organization and depth were informed by [JobPilot's context documentation](https://github.com/adrianhajdin/job_pilot/tree/788baa5784f94264c33780fd051f9d0b17a68f60/context) by Adrian Hajdin / JavaScript Mastery (`adrianhajdin`). No JobPilot documentation or design assets are included in the skill.
 
 ## Development
 

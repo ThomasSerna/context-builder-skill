@@ -1,5 +1,7 @@
 # Worked context examples
 
+These historical examples predate the staged workflow. The active business-stage example is in [business.md](business.md); the other examples are retained for the planned technical and UI stage guides and are not current workflow instructions.
+
 These original excerpts illustrate useful depth for a fictional, new equipment-booking project. They are not templates, default choices, or a complete specification. Read only the examples relevant to the selected documents. Ask the actual user about their project; never transfer the example's technology, permissions, values, or feature scope as their decisions.
 
 The example assumes the fictional user has approved the decisions shown. Its proposed implementation has not been built. A real project's evidence and approved decisions determine what belongs in its documents.

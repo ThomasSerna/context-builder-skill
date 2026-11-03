@@ -6,23 +6,24 @@ The portable skill lives in `skills/context-builder/`:
 
 ```text
 SKILL.md                    Entry point and workflow
-references/interview.md     Interview topics and completion criteria
-references/documents.md     Output contracts and reading order
-references/examples.md      Optional worked examples of document detail
+references/interview.md     Shared collaboration guidance
+references/documents.md     Status and agent-instruction rules
+references/business.md      Business interview, contract and example
+references/examples.md      Historical examples for future stage work
 agents/openai.yaml          Codex display metadata and invocation policy
 ```
 
-The main file links directly to its references. The skill can be copied as a directory or installed from the public repository through `npx skills add`; it does not call a project-owned executable or service or ship its own npm package or installer. `agents/openai.yaml` is Codex-specific metadata; the main skill and references are readable by other compatible agents.
+The main file links directly to the active references. The skill can be copied as a directory or installed from the public repository through `npx skills add`; it does not call a project-owned executable or service or ship its own npm package or installer. `agents/openai.yaml` is Codex-specific metadata; the main skill and references are readable by other compatible agents.
 
 ## Workflow and boundaries
 
-1. An explicit user invocation starts the workflow. The agent inspects relevant repository state and offers basic/complete and UI choices.
-2. The agent conducts an adaptive, collaborative interview, helping the user formulate decisions, explaining options and tradeoffs, and constructively challenging concrete conflicts. It separates observed facts, proposals, approved and deferred decisions and resolves blockers. The user selects the document language, which defaults to English.
-3. The agent checks the agreed decisions against the selected document contracts, presents the complete synthesis and waits for explicit approval. A material change invalidates that approval. No generated, draft or checkpoint files are written beforehand.
-4. The agent creates or updates the selected context files, maintains the marked `AGENTS.md` reading list and ensures a single `@AGENTS.md` import in `CLAUDE.md`.
-5. The agent repeats the contract and consistency review on the generated output and checks accuracy, agreement with the selected profile and preservation of unrelated content.
+1. An explicit invocation requests one stage. The business stage is currently available; technical and UI requests stop with an availability message until F12 and F13 are implemented.
+2. The agent inspects relevant evidence and any existing status index. It reuses approved decisions, confirms adoption of untracked decisions where needed, and interviews the user collaboratively. English is the default document language; a recorded choice is reused.
+3. The agent reviews the business-stage completion criteria, presents a synthesis with proposed document and status changes, and waits for explicit approval. A material change requires a revised synthesis and new approval. No files are written before the current stage's approval.
+4. The agent writes the approved business overview and shared status, maintains the marked `AGENTS.md` reading list and ensures a single `@AGENTS.md` import in `CLAUDE.md`. Affected downstream decisions are marked for review without silently changing their source documents.
+5. The agent verifies the approved result and stops. Work on another stage requires a new explicit request, including in the same conversation.
 
-The skill treats project sources and external reference material as evidence, while following applicable workspace instructions. Re-runs preserve unselected documents and user-authored content. Ambiguous markers, duplicate imports or conflicting instructions are resolved with the user rather than by guessing.
+The skill treats project sources and external reference material as evidence, while following applicable workspace instructions. `docs/context/context-status.md` points to approved source documents and records outstanding impacts; it does not duplicate their specifications or automatically detect outside edits. Re-runs preserve unselected documents and user-authored content. Ambiguous markers, duplicate imports or conflicting instructions are resolved with the user rather than by guessing.
 
 ## Repository documentation and checks
 

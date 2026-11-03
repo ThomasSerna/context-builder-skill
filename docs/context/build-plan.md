@@ -39,3 +39,19 @@ Evaluate collaborative interviews, document sufficiency, consistency and existin
 ## F10 — Shareable Skills CLI installation
 
 Document installation, update and removal through the existing Skills CLI and check the bundled skill in isolated installs. Acceptance: the published repository can be discovered, local installs for Codex and Claude Code preserve all bundled files and relative inline Markdown file links, checks pass locally on Ubuntu and Windows, and CI is configured without claiming native host invocation.
+
+## F11 — Resumable business discovery
+
+Replace profiles with explicit stage routing, shared status and per-stage approval; implement business discovery with a rigorous guide and example. Acceptance: the requested business stage writes only after its synthesis is approved, records source decisions and outstanding downstream impacts, preserves unrelated content and stops without starting another stage. Planned stages report their unavailability until delivered.
+
+## F12 — Technical specification
+
+Implement the separately requested technical stage and its five documents, grounded in relevant approved decisions or explicitly adopted prerequisites. Acceptance: data, interfaces, permissions, integrations, standards and verifiable feature work cover the agreed scope; the stage can be resumed and approved independently.
+
+## F13 — Optional UI specification
+
+Implement the separately requested UI stage with approved tokens, interaction rules and an evidence-based component registry. Acceptance: screens, actions, states, responsive and accessibility decisions cover the agreed scope without claiming planned components are implemented.
+
+## F14 — Staged evaluation
+
+Evaluate staged discovery, per-stage approval, preservation, fresh-chat continuity and affected downstream decisions. Acceptance: evidence identifies each scenario, actual results and remaining host limitations; historical profile results are not presented as validation of staged behavior.

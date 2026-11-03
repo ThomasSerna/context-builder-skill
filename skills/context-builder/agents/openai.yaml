@@ -1,7 +1,7 @@
 interface:
   display_name: "Context Builder"
   short_description: "Clarify a project before writing its repository context"
-  default_prompt: "Use $context-builder to clarify this project and create its documentation before implementation."
+  default_prompt: "Use $context-builder for the business stage of this project."
 
 policy:
   allow_implicit_invocation: false

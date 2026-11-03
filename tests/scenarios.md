@@ -19,6 +19,22 @@ These checks do not exercise the default symlink mode, global installation, upda
 
 **2026-11-02 — isolated installer checks:** Windows and Ubuntu 26.04 LTS via WSL each passed all seven validation tests and the smoke check with Node.js 24.15.0 and Skills CLI 1.7.5. For both Codex and Claude Code, the five installed files matched the checkout byte for byte and the checked relative file links resolved. The temporary source and project paths contained spaces. Pre- and post-check hashes of the user's `.agents/skills`, `.claude/skills` and `.local/state/skills` were unchanged. The GitHub Actions workflow has not yet run; native host discovery and invocation were not tested.
 
+## Staged business scenarios
+
+These scenarios describe the new business stage; they have not yet been run. Use a fresh isolated workspace for each case, load the complete skill and play the user without coaching the agent toward the oracle. Capture the conversation and compare the workspace with its baseline before and after approval. Technical and UI stages are not available in this revision.
+
+1. **Business discovery and critique.** Ask for the business stage of a shared equipment-booking project. Require that two people can request the same item and interval, but that only one can ultimately use it. When asked, settle who requests, who approves, cancellation, failed requests and scope. **Oracle:** the agent examines the potential conflict, explains viable options and a recommendation, obtains decisions, and describes actors, triggers, inputs, rules, states, outcomes, failures and observable checks. It does not impose pricing, a technology or design choices. No files are written before stage approval. After approval, only the overview, shared status and approved root instruction changes are written, and the agent stops.
+2. **Settled decisions and resumption.** Start from an existing approved business status and overview, in a new conversation. Provide no new conflict. **Oracle:** the agent reuses the recorded decisions and document language, asks only about actual gaps or requested changes, and does not manufacture objections or reopen viable settled choices. If there is no prior status, the agent asks for explicit adoption before treating existing content as approved.
+3. **Approval boundary.** Change a material business rule while responding to the synthesis. **Oracle:** the agent revises the synthesis and obtains fresh approval before writing. If approval is withheld, all files remain unchanged, including status and agent instructions.
+4. **Downstream impact.** Seed an approved technical source document and status entry; change a business rule that affects it. **Oracle:** the synthesis identifies the impact. After approval, the index marks the affected technical area as needing review while its source document remains unchanged; unaffected decisions remain approved. The managed reading list exposes the status before the existing active documents.
+5. **Stage routing and preservation.** Request technical or UI alone; also invoke the skill without naming a stage. **Oracle:** unavailable-stage requests stop without writing; an unspecified stage prompts for one stage. For a business update, unrelated files and instructions survive; duplicate or ambiguous managed markers and duplicate active Claude imports require user resolution.
+
+For each result, record the host, date, actual transcript and artifact evidence separately. A static review or simulated user does not prove native discovery or invocation enforcement.
+
+## Historical protocol and results — before staged workflow
+
+All scenarios and results below describe the retired basic/complete profile workflow. They are retained as historical evidence and do not verify the staged workflow above.
+
 ## Repeatable protocol
 
 1. Use a fresh temporary directory for each scenario. Make the complete `skills/context-builder/` folder available to the agent using its supported skill installation method, or explicitly ask the agent to read that folder's `SKILL.md` and linked references. Do not run the scenarios in this repository's working tree.
